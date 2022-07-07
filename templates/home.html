@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class='bill-board -landing'>
+<div class='bill-board-texts -centered'>
+<h1 class='title'>{{world_statistics.title}}</h1>
+<p class='lead'><strong>{{world_statistics.text}}</strong></p>
+<div class='actions'>
+</div>
+</div>
+<div class='-with-ads content-wrapper'>
+  <h1>Yangiliklar</h1>
+  {% for new in news %}
+  <div class="search-result-card" style="margin-bottom:30px;background-color: transparent;backdrop-filter: blur(18px);">
+    <div style="display: flex;">
+      <img src="{{new.img.url}}" width="300px" alt="">
+      <div style="padding-left: 12px;display: block";>
+        <h1>{{new.title}}</h1>        
+        <p style="font-size:20px">{{new.text}}</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+</div>
+{% endblock content %}

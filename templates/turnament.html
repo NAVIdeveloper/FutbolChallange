@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<div class="list-wrapper" style="padding-top:50px">
+    <h1 class="header"> Turnirlar </h1>
+    <div class="list -four">
+        {% if request.user.is_superuser %}
+        <a href="{% url 'add_turnament'  %}"><div class="search-result-card">
+            <div class="body" style="display:flex;justify-content:center;align-item:center;">
+                <ion-icon name="add" style="font-size:100px;"></ion-icon>
+            </div>
+        </div>
+        </a>
+        {% endif %}
+        {% for turnir in turnirlar %}
+        <div class="search-result-card">
+            <div class="header">
+                <img src="{{turnir.img.url}}">
+            </div>
+            <div class="body">
+                <div class="user-details">
+                    <div class="img">
+                        <img src="{{turnir.logo.url}}" class="user-avatar -smed">
+                    </div>
+                    <div class="name -break">
+                        <strong> {{turnir.title}} </strong>
+                    </div>
+                </div>
+                <ul class="list-details">
+                    <h6 style="font-style:italic;">
+                        <li>
+                            <ion-icon name="keypad-outline"></ion-icon>
+                        <span class="text">Turi: 
+                            {% if turnir.type == 1 %}
+                                Liga guruh
+                            {% else %}
+                                Table guruh
+                            {% endif %}
+                        </span>
+                    </li>
+                    <li>
+                        <ion-icon name="calendar-outline"></ion-icon>
+                        <span class="text">Ro'yxatdan o'tish boshlangan sanasi: {{turnir.start_date.date}}</span>
+                    </li>
+                    <li>
+                        <ion-icon name="calendar-outline"></ion-icon>
+                        <span class="text">Ro'yxatdan o'tish tugash sanasi: {{turnir.end_date.date}}</span>
+                    </li>
+                    <li>
+                        <ion-icon name="time-outline"></ion-icon>
+                        <span class="text">Vaqt zonasi: {{turnir.timezone}}</span>
+                    </li>
+                    </h6>
+                </ul>
+                <div class="actions">
+                    <a class="btn btn-block btn-default" href="{% url 'detail-turnament' turnir.id %}" style="margin-top: 25px;" type="submit" >Ko'rish</a>
+                </div>
+                
+            </div>
+        </div>
+        {% endfor %}
+{% endblock content %}

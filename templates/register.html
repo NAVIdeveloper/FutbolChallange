@@ -1,0 +1,184 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+<meta content='text/html;charset=utf-8' http-equiv='Content-Type'>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="qrjqczTdROuJKudddm6ARpSQI4axzY+eSSW8n6VgJFEjmSV/VJIhdzuYh3RKV93nA4xGciRg3O+ZWMMhQanDjw==" />
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<meta content='https://stream.challonge.com:8000/faye' name='stream-url'>
+<link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" />
+<link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css2?family=Blinker:wght@400;600&amp;display=swap" />
+<link rel="stylesheet" media="screen" href="https://use.typekit.net/ema8ehi.css" />
+<link rel="stylesheet" media="all" href="https://assets.challonge.com/assets/public-f6583f366a9456a52068038f98cf71aff4c82938168e990c36030e52912f01f8.css" class="challonge_stylesheet" />
+
+<meta content='Challonge' property='og:title'>
+<meta content='Наилучший сервис для создания турнирных цепочек' property='og:description'>
+<meta content='website' property='og:type'>
+<meta content='https://assets.challonge.com/assets/og-default-9d2c9e67cc219b24e19785afa8d289899116d96512f6096e67f04b854b2d174e.png' property='og:image'>
+
+
+<link href='https://challonge.com/ar/dashboard' hreflang='ar' id='locale-ar' rel='alternate'>
+<link href='https://challonge.com/cs/dashboard' hreflang='cs' id='locale-cs' rel='alternate'>
+<link href='https://challonge.com/da/dashboard' hreflang='da' id='locale-da' rel='alternate'>
+<link href='https://challonge.com/de/dashboard' hreflang='de' id='locale-de' rel='alternate'>
+<link href='https://challonge.com/dashboard' hreflang='en' id='locale-en' rel='alternate'>
+<link href='https://challonge.com/es/dashboard' hreflang='es' id='locale-es' rel='alternate'>
+<link href='https://challonge.com/fi/dashboard' hreflang='fi' id='locale-fi' rel='alternate'>
+<link href='https://challonge.com/fr/dashboard' hreflang='fr' id='locale-fr' rel='alternate'>
+<link href='https://challonge.com/hu/dashboard' hreflang='hu' id='locale-hu' rel='alternate'>
+<link href='https://challonge.com/id/dashboard' hreflang='id' id='locale-id' rel='alternate'>
+<link href='https://challonge.com/it/dashboard' hreflang='it' id='locale-it' rel='alternate'>
+<link href='https://challonge.com/ja/dashboard' hreflang='ja' id='locale-ja' rel='alternate'>
+<link href='https://challonge.com/ko/dashboard' hreflang='ko' id='locale-ko' rel='alternate'>
+<link href='https://challonge.com/nl/dashboard' hreflang='nl' id='locale-nl' rel='alternate'>
+<link href='https://challonge.com/no/dashboard' hreflang='no' id='locale-no' rel='alternate'>
+<link href='https://challonge.com/pl/dashboard' hreflang='pl' id='locale-pl' rel='alternate'>
+<link href='https://challonge.com/pt/dashboard' hreflang='pt' id='locale-pt' rel='alternate'>
+<link href='https://challonge.com/pt_BR/dashboard' hreflang='pt-br' id='locale-pt_BR' rel='alternate'>
+<link href='https://challonge.com/ro/dashboard' hreflang='ro' id='locale-ro' rel='alternate'>
+<link href='https://challonge.com/sk/dashboard' hreflang='sk' id='locale-sk' rel='alternate'>
+<link href='https://challonge.com/sv/dashboard' hreflang='sv' id='locale-sv' rel='alternate'>
+<link href='https://challonge.com/th/dashboard' hreflang='th' id='locale-th' rel='alternate'>
+<link href='https://challonge.com/tr/dashboard' hreflang='tr' id='locale-tr' rel='alternate'>
+<link href='https://challonge.com/vi/dashboard' hreflang='vi' id='locale-vi' rel='alternate'>
+<link href='https://challonge.com/zh_CN/dashboard' hreflang='zh-cn' id='locale-zh_CN' rel='alternate'>
+<link href='https://challonge.com/zh_TW/dashboard' hreflang='zh-tw' id='locale-zh_TW' rel='alternate'>
+
+<link href='https://assets.challonge.com/apple-touch-icon.png' rel='apple-touch-icon' sizes='180x180'>
+<link href='https://assets.challonge.com/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'>
+<link href='https://assets.challonge.com/favicon-32x32.png' rel='icon' sizes='32x32' type='image/png'>
+<link href='https://assets.challonge.com/manifest.json' rel='manifest'>
+<link color='#272a33' href='https://assets.challonge.com/safari-pinned-tab.svg' rel='mask-icon'>
+<meta content='#272a33' name='theme-color'>
+<script>
+
+function OnChnageLogo(input) {
+    reader = new FileReader();
+    logo_print = document.getElementById('print_logo');
+    // setAttribute('src',)
+    img = input.value;
+    reader.onload = function (e) {
+        logo_print.setAttribute('src',e.target.result);
+    }
+    
+    reader.readAsDataURL(input.files[0]);
+}
+
+function OnChnageBanner(input) {
+    reader = new FileReader();
+    logo_print = document.getElementById('print_banner');
+    // setAttribute('src',)
+    img = input.value;
+    reader.onload = function (e) {
+        logo_print.setAttribute('src',e.target.result);
+    }
+    
+    reader.readAsDataURL(input.files[0]);
+}
+
+</script>
+<!-- OneTrust Cookies Consent Notice start for challonge.com -->
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="b238c794-6128-4411-ada6-946438558a25" ></script>
+<script type="text/javascript">
+function OptanonWrapper() { }
+</script>
+<!-- OneTrust Cookies Consent Notice end for challonge.com -->
+
+
+  <script type="text/plain" class="optanon-category-C0002" src="https://www.googleoptimize.com/optimize.js?id=GTM-TLN4VDV"></script>
+
+
+<title>
+Challonge
+</title>
+</head>
+<body class='dashboard dashboard-show '>
+
+
+<div class='content'>
+
+
+<nav class='default-nav' data-js-nav-shift>
+<div class='right'>
+<div class='is-hidden-mobile' style="padding-left:0px;">
+<ul class='tabbed-navlist varnish-logged-out'>
+    <li class='item'>
+        <a class="link " href="{% url 'home' %}"> Bosh sahifa</a>
+    </li>
+</ul>    
+</div>
+<p>
+    oldin ro'yxatdan o'tganmisiz ?
+    <span>
+    <a class="btn btn-white" href="{% url 'kirish' %}"> Kirish</a>
+    </span>
+    </p>
+</div>
+
+</div>
+</div>
+</nav>
+
+<div class="main" data-js-scrollable="">
+    <div class="session-body">
+    <div class="header">
+    <h1 class="title">
+        Sayt bilan ro'yxatdan o'ting
+    </h1>
+    <p class="desc">Turnirda jamoa boshqarish uchun roʻyxatdan oʻtishni boshlang!</p>
+    </div>
+    
+    <div class="body">
+    <form class="new_user" id="new_user" action="{% url 'register' %}" accept-charset="UTF-8" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <h3>Logo:</h3>
+    <div style="display: flex;justify-content: center;align-items: center;padding-bottom:20px;">
+        <img id="print_logo" src="https://d3949ah8cpww7d.cloudfront.net/media/image/site_logo/original/afb264f6648a53b14419306a1b7da2b9/3d466270dcd011e6b0de11bac6441456.jpg" alt="" width="220px" height="220px" style="border-radius:50%;">
+    </div>
+    <h3>Banner:</h3>
+    <div style="display: flex;justify-content: center;align-items: center;padding-bottom:20px;">
+        <img id="print_banner" src="" alt="" width="100%">
+    </div>
+    <input placeholder="Foydalanuvchi nomi" class="form-control enforce-uniqueness" required="required" type="text" name="username" id="user_username">
+    <br>
+    <div class="form-group floating-label-form-group">
+    <input placeholder="Elektron pochta" class="form-control" required="required" name="email" type="email" id="user_email">
+    </div>
+    <div class="form-group floating-label-form-group">
+    <input class="form-control" required="required" type="password" name="password" placeholder="Parol" id="user_password">
+    </div>
+    
+        <a onclick="document.getElementById('logo').click()" class="btn btn-primary btn-block btn-lg">Logo Tanlash</a>
+        <input type="file" id="logo" name="logos" onchange="OnChnageLogo(this)" required style="visibility: hidden;">
+        
+    <a onclick="document.getElementById('banner').click()" class="btn btn-primary btn-block btn-lg">Banner Tanlash</a>
+        <input type="file" name="banners" id="banner" onchange="OnChnageBanner(this)" required style="visibility: hidden;">
+        
+    <hr>
+    <div class="form-group">
+    <input type="submit" name="commit" value="Ro'yxatdan o'tish" data-disable-with="Создать аккаунт" class="btn btn-primary btn-block btn-lg">
+    </div>
+    </form>
+    </div>
+    </div>
+    
+    </div>
+
+    <input type="hidden" name="locale" id="locale" value="ru" />
+    
+    </div>
+    <div id='react-modal-portal'></div>
+    
+    <script src="https://assets.challonge.com/assets/application-0be104125b6d6180788118774462d6eeb054b5fca3fe970ff5423e73a72c80cf.js"></script>
+    <script src="https://assets.challonge.com/assets/packs/vendors-2a2fba58367ca8f2b1923d7c23eac827b0d3c00a880fe98220a17359d91a7bc5.js"></script>
+    <script src="https://assets.challonge.com/assets/packs/react-shared-c34f925ffeeb179c576953bbcf737541092c9dbde2c6da56db003c85db0827fd.js"></script>
+    <script src="https://assets.challonge.com/assets/packs/react-payments-74ed2b3622121a8bc405a169c9672a889cb5c33c44a1913aa3fd2a3f7b686861.js"></script>
+    <script src="https://assets.challonge.com/assets/countUp.min-c5d0d8c3322fed4b194948810957eb37851ca50e992e5592b8d10e951370c869.js"></script>
+    <script>
+      var numAnim = new CountUp("bracket-counter", 2000000, 30398429, false, 2.5);
+      numAnim.start();
+</script>
+    
+    </body>
+    </html>

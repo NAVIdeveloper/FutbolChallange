@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<div class="list-wrapper" style="padding-top:50px">
+    <h1 class="header"> Jamoalar </h1>
+    <div class="list -four">
+        {% for team in teams %}
+        <div class="search-result-card">
+            <div class="header">
+                <img src="{{team.banner.url}}">
+            </div>
+            <div class="body">
+                <div class="user-details">
+                    <div class="img">
+                        <img src="{{team.img.url}}" class="user-avatar -smed">
+                    </div>
+                    <div class="name -break">
+                        <strong> {{team.username}} </strong>
+                    </div>
+                </div>
+                <ul class="list-details">
+                    <h6 style="font-style:italic;">
+                        <li>
+                            <ion-icon name="keypad-outline"></ion-icon>
+                        <span class="text">email: {{team.email}}
+                        </span>
+                    </li>
+                    
+                    </h6>
+                </ul>
+                
+                <div class="actions">
+                    <a class="btn btn-block btn-default" href="{% url 'detail-team' team.id %}" style="margin-top: 25px;" type="submit" >Ko'rish</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+{% endblock content %}
